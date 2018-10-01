@@ -21,7 +21,15 @@ public class App
         p2.putOrange(o1);
         p2.putOrange(o2);
         p2.putOrange(o2);
+        VueConsole vc=new VueConsole();
+        p.addObserver(vc);
         p.boycotte("Allemagne");
-        System.out.println(p.toString());
+        VueGswing vue=new VueGswing();
+        Controler c=new Controler();
+        c.setP(p);
+        c.setVue(vue);
+        p.addObserver(vue);
+        vue.addControler(c);
+        vue.setVisible(true);
     }
 }

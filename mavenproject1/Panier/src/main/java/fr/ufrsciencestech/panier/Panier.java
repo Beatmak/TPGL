@@ -6,12 +6,13 @@
 
 package fr.ufrsciencestech.panier;
 import java.util.ArrayList;
+import java.util.Observable;
 
 /**
  *
  * @author sc364347
  */
-public class Panier {
+public class Panier extends Observable {
     private ArrayList<Orange> liste;
     private int max;
     
@@ -21,46 +22,50 @@ public class Panier {
     }
     
     public boolean estPlein(){
-        if(liste.size()==max){
+        if(getListe().size()==max){
             return true;
         }
         return false;
     }
     
     public Orange getOrange(int i){
-        return liste.get(i);
+        return getListe().get(i);
     }
     
     public void putOrange(Orange o){
-        liste.add(o);
+        getListe().add(o);
+        setChanged();
+        notifyObservers();
     }
     
     public double getPrix(){
         double p=0;
-        for(int i=0 ; i<liste.size(); i++){
-            p+=liste.get(i).getPrix();
+        for(int i=0 ; i<getListe().size(); i++){
+            p+=getListe().get(i).getPrix();
         }
         return p;
 
     }
     
     public int getSize(){
-        return liste.size();
+        return getListe().size();
     }
     
     public void retire(){
-        liste.remove(liste.size()-1);
+        getListe().remove(getListe().size()-1);
+        setChanged();
+        notifyObservers();
     }
     
     public boolean estVide(){
-        return liste.isEmpty();
+        return getListe().isEmpty();
     }
     
     public boolean Equals(Panier p){
-        if(p.getSize()!=liste.size()){
+        if(p.getSize()!=getListe().size()){
             return false;
         }
-        for(int i=0 ; i<liste.size(); i++){
+        for(int i=0 ; i<getListe().size(); i++){
             if(!liste.get(i).Equals(p.getOrange(i))){
                 return false;
             }
@@ -69,18 +74,25 @@ public class Panier {
     }
     
     public void boycotte(String str){
-        for(int i=0 ; i<liste.size(); i++){
-            if(liste.get(i).getOrigine().equals(str)){
-                liste.remove(i);
+        for(int i=0 ; i<getListe().size(); i++){
+            if(getListe().get(i).getOrigine().equals(str)){
+                getListe().remove(i);
             }
         }
     }
     
     public String toString(){
         String str="";
-        for(int i=0 ; i<liste.size(); i++ ){
-            str+=liste.get(i);
+        for(int i=0 ; i<getListe().size(); i++ ){
+            str+=getListe().get(i);
         }
         return str;
+    }
+
+    /**
+     * @return the liste
+     */
+    public ArrayList<Orange> getListe() {
+        return liste;
     }
 }
