@@ -168,6 +168,16 @@ public class PanierTest {
         fail("The test case is a prototype.");
     }
     
-    @Test (expected = PanierPlein)
+    @Test 
+    public void testPrixPanierA2Orange(){
+        Orange omock1=mock (Orange.class);
+        Orange omock2=mock (Orange.class);
+        when ( omock1.getPrix()).thenReturn (1.0);
+        when ( omock2.getPrix()).thenReturn (2.0);
+        pvide.putOrange(omock1);
+        pvide.putOrange(omock2);
+        assertTrue (pvide.getPrix()==3.0);
+        verify(omock1,times(1)).getPrix();
+    }
     
 }
