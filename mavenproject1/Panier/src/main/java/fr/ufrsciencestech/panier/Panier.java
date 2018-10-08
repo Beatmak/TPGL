@@ -29,7 +29,7 @@ public class Panier extends Observable {
     }
     
     public Orange getOrange(int i){
-        return getListe().get(i);
+        return liste.get(i);
     }
     
     public void putOrange(Orange o){

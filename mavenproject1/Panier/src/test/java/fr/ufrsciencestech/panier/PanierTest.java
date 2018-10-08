@@ -20,10 +20,15 @@ import static org.mockito.Mockito.*;
  */
 public class PanierTest {
     
-    public PanierTest() {
+    Panier pvide,p1,p2,pplein;
+    Orange o1,o2,o3;
+    
+    public PanierTest(){
     }
     @BeforeClass
-    public static void setUpClass() {
+    public static void setUpClass()  {
+       
+       
     }
     
     @AfterClass
@@ -32,6 +37,20 @@ public class PanierTest {
     
     @Before
     public void setUp() {
+        pvide = new Panier (4);
+       p1 = new Panier (4);
+       p2 = new Panier (4);
+       pplein = new Panier (4);
+       o1 =  new Orange (1.5, "Espagne");
+       o2 =  new Orange (2.5, "Espagne");
+       o3 =  new Orange (1.5, "Italie");
+       p1.putOrange(o1);
+       p2.putOrange(o1);
+       pplein.putOrange(o1);
+       pplein.putOrange(o1);
+       pplein.putOrange(o2);
+       pplein.putOrange(o3);
+       
     }
     
     @After
@@ -44,41 +63,11 @@ public class PanierTest {
     @Test
     public void testEstPlein() {
         System.out.println("estPlein");
-        Panier instance = new Panier(60);
-        boolean expResult = false;
-        boolean result = instance.estPlein();
+        boolean expResult = true;
+        boolean result = pplein.estPlein();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of getOrange method, of class Panier.
-     */
-    @Test
-    public void testGetOrange() {
-        System.out.println("getOrange");
-        int i = 0;
-        Panier instance = new Panier(6);
-        Orange expResult = mock(Orange.class);
-        Orange result = instance.getOrange(i);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of putOrange method, of class Panier.
-     */
-    @Test
-    public void testPutOrange() {
-        System.out.println("putOrange");
-        Orange o = null;
-        Panier instance = null;
-        instance.putOrange(o);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of getPrix method, of class Panier.
@@ -86,12 +75,9 @@ public class PanierTest {
     @Test
     public void testGetPrix() {
         System.out.println("getPrix");
-        Panier instance = null;
-        double expResult = 0.0;
-        double result = instance.getPrix();
+        double expResult = 1.5;
+        double result = p1.getPrix();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -100,12 +86,10 @@ public class PanierTest {
     @Test
     public void testGetSize() {
         System.out.println("getSize");
-        Panier instance = null;
-        int expResult = 0;
-        int result = instance.getSize();
+        int expResult = 1;
+        int result = p1.getSize();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+ 
     }
 
     /**
@@ -126,12 +110,9 @@ public class PanierTest {
     @Test
     public void testEstVide() {
         System.out.println("estVide");
-        Panier instance = null;
-        boolean expResult = false;
-        boolean result = instance.estVide();
+        boolean expResult = true;
+        boolean result = pvide.estVide();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -140,13 +121,10 @@ public class PanierTest {
     @Test
     public void testEquals() {
         System.out.println("Equals");
-        Panier p = null;
-        Panier instance = null;
-        boolean expResult = false;
-        boolean result = instance.Equals(p);
+        boolean expResult = true;
+        boolean result = p1.Equals(p2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -189,5 +167,7 @@ public class PanierTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    
+    @Test (expected = PanierPlein)
     
 }
