@@ -160,12 +160,9 @@ public class PanierTest {
     @Test
     public void testGetListe() {
         System.out.println("getListe");
-        Panier instance = null;
-        ArrayList<Orange> expResult = null;
-        ArrayList<Orange> result = instance.getListe();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Orange> expResult = new ArrayList<Orange>();
+        ArrayList<Orange> result = pvide.getListe();
+        assertEquals(true, result.equals(expResult));
     }
     
     @Test 
