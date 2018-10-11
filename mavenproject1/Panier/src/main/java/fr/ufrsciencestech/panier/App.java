@@ -24,10 +24,10 @@ public class App
         VueConsole vc=new VueConsole();
         p.addObserver(vc);
         p.boycotte("Allemagne");
-        VueAWT vue=new VueAWT();
+        VueGswing vue=new VueGswing();
         Controler c=new Controler();
         c.setP(p);
-        c.setVue2(vue);
+        c.setVue(vue);
         p.addObserver(vue);
         vue.addControler(c);
         vue.setVisible(true);
