@@ -135,8 +135,8 @@ public class PanierTest {
     @Test
     public void testGetListe() {
         System.out.println("getListe");
-        ArrayList<Orange> expResult = new ArrayList<Orange>();
-        ArrayList<Orange> result = pvide.getListe();
+        ArrayList<Fruit> expResult = new ArrayList<Fruit>();
+        ArrayList<Fruit> result = pvide.getListe();
         assertEquals(true, result.equals(expResult));
     }
     
