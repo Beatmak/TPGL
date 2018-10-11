@@ -93,7 +93,7 @@ public class VueGswing extends javax.swing.JFrame implements Observer {
     public void update(Observable o, Object arg) {
         //To change body of generated methods, choose Tools | Templates.
         Panier p=(Panier)o;
-        jTextArea1.setText(((Integer)p.getSize()).toString());
+        jTextArea1.setText(p.toString());
     }
 
     /**
