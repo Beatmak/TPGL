@@ -36,6 +36,11 @@ public abstract class Fruit {
         
     }
     
+    public String getNom()
+    {
+        return this.nom;
+    }
+    
     public double getPrix(){return prix;};
     public String getOrigine(){return origine;};
 

@@ -119,16 +119,7 @@ public class PanierTest {
     /**
      * Test of boycotte method, of class Panier.
      */
-    @Test
-    public void testBoycotte() {
-        System.out.println("boycotte");
-        String str = "";
-        Panier instance = null;
-        instance.boycotte(str);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+  
     /**
      * Test of getListe method, of class Panier.
      */
