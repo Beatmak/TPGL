@@ -14,11 +14,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author sc364347
+ * @author hc047736
  */
-public class OrangeTest {
+public class BananeTest {
     
-    public OrangeTest() {
+    public BananeTest() {
     }
     
     @BeforeClass
@@ -38,12 +38,12 @@ public class OrangeTest {
     }
 
     /**
-     * Test of getPrix method, of class Orange.
+     * Test of getPrix method, of class Banane.
      */
     @Test
     public void testGetPrix() {
         System.out.println("getPrix");
-        Orange instance = new Orange (2.1,"Allemagne");
+        Banane instance = new Banane (2.1,"Allemagne");
         double expResult = 2.1;
         double result = instance.getPrix();
         assertEquals(expResult, result,0.0);
@@ -51,12 +51,12 @@ public class OrangeTest {
     }
 
     /**
-     * Test of getOrigine method, of class Orange.
+     * Test of getOrigine method, of class Banane.
      */
     @Test
     public void testGetOrigine() {
         System.out.println("getOrigine");
-        Orange instance = new Orange (2.1,"Allemagne");
+        Banane instance = new Banane (2.1,"Allemagne");
         String expResult = "Allemagne";
         String result = instance.getOrigine();
         assertEquals(expResult, result);
@@ -64,25 +64,25 @@ public class OrangeTest {
     }
 
     /**
-     * Test of Equals method, of class Orange.
+     * Test of Equals method, of class Banane.
      */
     @Test
     public void testEquals() {
         System.out.println("Equals");
-        Orange o = new Orange (2.1f,"Allemagne");
-        Orange instance = new Orange (2.1f,"Allemagne");
+        Banane o = new Banane (2.1f,"Allemagne");
+        Banane instance = new Banane (2.1f,"Allemagne");
         boolean expResult = true;
         boolean result = instance.Equals(o);
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of toString method, of class Orange.
+     * Test of toString method, of class Banane.
      */
     @Test
     public void testToString() {
         System.out.println("toString");
-        Orange instance = new Orange (2.1,"Allemagne");
+        Banane instance = new Banane (2.1,"Allemagne");
         String expResult = "Prix : 2.1\n origine : Allemagne \n";
         String result = instance.toString();
         assertEquals(expResult, result);

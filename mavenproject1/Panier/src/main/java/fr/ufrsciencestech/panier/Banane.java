@@ -7,18 +7,15 @@ package fr.ufrsciencestech.panier;
 
 /**
  *
- * @author sc364347
+ * @author hc047736
  */
-public class Orange extends Fruit {
+public class Banane extends Fruit {
     
-  
-    public Orange(double p,String str){
-        
-        super("Orange",p,str);
-        
+    
+    public Banane(double p, String o)
+    {
+        super("Banane",p,o);
         
     }
-
-    
     
 }

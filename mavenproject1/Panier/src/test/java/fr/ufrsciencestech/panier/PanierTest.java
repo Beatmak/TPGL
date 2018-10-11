@@ -95,14 +95,6 @@ public class PanierTest {
     /**
      * Test of retire method, of class Panier.
      */
-    @Test
-    public void testRetire() {
-        System.out.println("retire");
-        Panier instance = null;
-        instance.retire();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of estVide method, of class Panier.
@@ -130,29 +122,11 @@ public class PanierTest {
     /**
      * Test of boycotte method, of class Panier.
      */
-    @Test
-    public void testBoycotte() {
-        System.out.println("boycotte");
-        String str = "";
-        Panier instance = null;
-        instance.boycotte(str);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+  
     /**
      * Test of toString method, of class Panier.
      */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Panier instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+
 
     /**
      * Test of getListe method, of class Panier.

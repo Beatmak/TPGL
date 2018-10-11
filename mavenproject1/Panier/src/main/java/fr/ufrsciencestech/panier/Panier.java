@@ -33,9 +33,14 @@ public class Panier extends Observable {
     }
     
     public void putOrange(Orange o){
+        
+     if(o!=null)
+     {
         getListe().add(o);
         setChanged();
         notifyObservers();
+     }
+      
     }
     
     public double getPrix(){
