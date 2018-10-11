@@ -29,6 +29,18 @@ public class Controler implements ActionListener{
             if(nb==0){
               p.putOrange(new Orange(1,"France"));  
             }
+            if(nb==1){
+                p.putOrange(new Cerise(4545,"Algérie"));  
+            }
+            if(nb==2){
+                Macedoine mac = new Macedoine(45,"Algérie");
+                mac.ajouteFruit(new Orange(1,"France"));
+                mac.ajouteFruit(new Banane(2.5,"Suisse"));
+                p.putOrange(mac);  
+            }
+            if(nb==3){
+                p.putOrange(new Jus(11,"China"));  
+            }
             if(nb==4){
                 p.putOrange(new Banane(4545,"Algérie"));  
             }

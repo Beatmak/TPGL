@@ -79,14 +79,6 @@ public class OrangeTest {
     /**
      * Test of toString method, of class Orange.
      */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Orange instance = new Orange (2.1,"Allemagne");
-        String expResult = "Prix : 2.1\n origine : Allemagne \n";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        
-    }
+    
     
 }

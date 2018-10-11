@@ -53,7 +53,7 @@ public abstract class Fruit {
     
     
     public String toString(){
-        String str="Nom : "+nom+"\n Prix : "+prix+"\n origine : "+origine+" \n \n";
+        String str="Nom : "+nom+"\n Prix : "+prix+"\n origine : "+origine+" \n";
         return str;
         
     }

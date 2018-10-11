@@ -79,14 +79,6 @@ public class BananeTest {
     /**
      * Test of toString method, of class Banane.
      */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Banane instance = new Banane (2.1,"Allemagne");
-        String expResult = "Prix : 2.1\n origine : Allemagne \n";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        
-    }
+
     
 }

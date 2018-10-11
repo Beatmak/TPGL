@@ -76,14 +76,5 @@ public class JusTest {
     /**
      * Test of toString method, of class Jus.
      */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Jus instance = new Jus (2.1,"Allemagne");
-        String expResult = "Prix : 2.1\n origine : Allemagne \n";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        
-    }
-    
+
 }
