@@ -19,6 +19,8 @@ public class Macedoine extends Fruit{
      {
          super("La macedoine",p,origine);
      }
+     
+     
      /*
      public void ajouteFruit(Fruit f){
         
