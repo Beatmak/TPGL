@@ -13,12 +13,12 @@ import java.util.Observable;
  * @author sc364347
  */
 public class Panier extends Observable {
-    private ArrayList<Orange> liste;
+    private ArrayList<Fruit> liste;
     private int max;
     
     public Panier(int m){
         this.max=m;
-        this.liste= new ArrayList<Orange>();
+        this.liste= new ArrayList<Fruit>();
     }
     
     public boolean estPlein(){
@@ -28,7 +28,7 @@ public class Panier extends Observable {
         return false;
     }
     
-    public Orange getOrange(int i){
+    public Fruit getOrange(int i){
         return liste.get(i);
     }
     
@@ -97,7 +97,7 @@ public class Panier extends Observable {
     /**
      * @return the liste
      */
-    public ArrayList<Orange> getListe() {
+    public ArrayList<Fruit> getListe() {
         return liste;
     }
 }
