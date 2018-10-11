@@ -49,7 +49,7 @@ public class VueGswing extends javax.swing.JFrame implements Observer {
         });
         jPanel2.add(jButton2, java.awt.BorderLayout.LINE_START);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Orange", "Cerise", "Macedoine", "Jus", "Banane" }));
         jPanel2.add(jComboBox1, java.awt.BorderLayout.PAGE_START);
 
         jTextArea1.setEditable(false);
@@ -108,5 +108,8 @@ public class VueGswing extends javax.swing.JFrame implements Observer {
     public void addControler(Controler c){
         jButton2.addActionListener(c);
         jButton3.addActionListener(c);
+    }
+    public int getIndex(){
+        return jComboBox1.getSelectedIndex();
     }
 }

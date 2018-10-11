@@ -25,7 +25,14 @@ public class Controler implements ActionListener{
         try{
            b=(JButton)e.getSource(); 
            if(b.equals(vue.getjButton2())){
-            p.putOrange(new Orange(1,"A mort le MVC"));
+            int nb=vue.getIndex();
+            if(nb==0){
+              p.putOrange(new Orange(1,"France"));  
+            }
+            if(nb==4){
+                p.putOrange(new Banane(4545,"Algérie"));  
+            }
+            
         }
         if(b.equals(vue.getjButton3())){
             p.retire();

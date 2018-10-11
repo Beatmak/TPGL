@@ -32,7 +32,7 @@ public class Panier extends Observable {
         return liste.get(i);
     }
     
-    public void putOrange(Orange o){
+    public void putOrange(Fruit o){
         
      if(o!=null)
      {
@@ -89,7 +89,7 @@ public class Panier extends Observable {
     public String toString(){
         String str="";
         for(int i=0 ; i<getListe().size(); i++ ){
-            str+=getListe().get(i);
+            str+=getListe().get(i).toString();
         }
         return str;
     }
